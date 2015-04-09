@@ -21,7 +21,8 @@ int main()
 {
 	ofstream out;
 	ifstream in;
-	in.open("data_test");
+	in.open("data_r00");
+	out.open("result_r00");
 	string line;
 	int i = 0;
 	struct result a;
@@ -48,7 +49,8 @@ int main()
 			i = 0;
 			a.nexthop = line;
 			sprintf(b,"%s %s",a.prefix.c_str(),a.nexthop.c_str());
-			cout << b << endl;
+			//cout << b << endl;
+			out << b << endl;
 		}
 	}
 
